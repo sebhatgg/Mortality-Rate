@@ -11,13 +11,13 @@ morta=morta[['Location', 'FIPS','Category','Mortality Rate, 1980*','Mortality Ra
 #print(morta.head(5))
 
 mortaStates=morta[morta['FIPS']<60]
-#print(mortaStates.head(5))
+print(mortaStates.head(5))
 
-mortaStates.describe()
+print(mortaStates.describe())
 
-mortaStates.shape
+print(mortaStates.shape)
 
-mortaStates['Category'].value_counts()
-
+print(mortaStates['Category'].value_counts())
+plt.figure(figsize=(30,20))
 plt.plot(mortaStates['% Change in Mortality Rate, 1980-2014'], mortaStates['Category'])
 
